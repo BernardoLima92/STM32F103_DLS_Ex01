@@ -1,11 +1,11 @@
 # STM32F103_DLS_Ex01
-Foftware developed for performing DLS experiments
+Software developed for performing DLS experiments
 
 O software desenvolvido tem o seguinte objetivo:
 - Realizar a aquisição de Ns valores analógicos, com uma frequência de amostragem fs, durante um intervalo de tempo T.
 
-Este programa pode ser usado para diversas aplicações onde se deseje uma aquisição analógica com alta velocidade. No nosso caso, usaremos para 
-experiments de DLS (Espalhamento Dinâmico da Luz).
+Este programa pode ser usado para diversas aplicações onde seja necessária uma aquisição analógica com alta velocidade. No nosso caso, usaremos para 
+experimentos de DLS (Espalhamento Dinâmico da Luz).
 
 O programa mostrado neste tutorial realiza a leitura de 1500 valores analógicos através do ADC do STM32F103 (Bluepill) sempre que um comando é dado.
 No nosso experimento, o comando é dado através de um push-button conecntado em modo pull-up à porta PB9 do microcontrolador.
