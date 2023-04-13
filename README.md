@@ -40,12 +40,14 @@ O arquivo HEX pode ser usado para gravar diretamente no STM32, sem a necessidade
 O Arquivo IOC é o arquivo gerado pelo STM32CubeIDE, e possui as configurações visuais do software gerado.
 
 Para gravar no microcontrolador o arquivo HEX gerado pelo STM32CubeIDE usei o software STM32 ST-Link Utility.
-![STLink](https://user-images.githubusercontent.com/114233216/231756942-02806b43-a609-4b99-90d5-9c2604f42ae0.png)
+![STLink](https://user-images.githubusercontent.com/114233216/231759696-82f94c8f-6c49-44d0-a65a-3dd6f5c0e469.png)
+
 
 
 Para a transferência Serial entre o STM32F103 (BluPill) e o PC, usei um módulo conversor CH340, mostrado na imagem abaixo.
 ![CH340](https://user-images.githubusercontent.com/114233216/231759344-0dbe064b-0a9d-40d6-9a7c-bffa4d09ceb2.png)
 
+O resultado é mostrado no software Free Termite Serial. (Pode ser usado em conjunto com qualquer software, inclusive o LabView).
 
 
 
