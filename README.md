@@ -37,9 +37,11 @@ Estão nesta ordem:
 
 O código escrito está no arquivo main.c presente na pasta principal deste repositório. Além deste código em C, há também um arquivo .HEX e um arquivo .IOC.
 O arquivo HEX pode ser usado para gravar diretamente no STM32, sem a necessidade de se usar o STM32CubeIDE.
-O Arquivi IOC é o arquivo gerado pelo STM32CubeIDE, e possui as configurações visuais do software gerado.
+O Arquivo IOC é o arquivo gerado pelo STM32CubeIDE, e possui as configurações visuais do software gerado.
 
 Para gravar no microcontrolador o arquivo HEX gerado pelo STM32CubeIDE usei o software STM32 ST-Link Utility.
+![STLink](https://user-images.githubusercontent.com/114233216/231756942-02806b43-a609-4b99-90d5-9c2604f42ae0.png)
+
 
 
 O intervalo de tempo total no qual o sinal é adquirido depende diretamente da frequência de amostragem escolhida e da memória do microcontrolador.
