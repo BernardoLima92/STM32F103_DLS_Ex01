@@ -14,10 +14,11 @@ Após a realização das 1500 leituras (e consequentemente, após o preenchiment
 O softwate Termite foi usado como Terminal Serial para a leitura dos dados.
 
 O fluxograma abaixo ilustra as etapas do programa:
-![Fluxograma](https://user-images.githubusercontent.com/114233216/231753766-15def680-fcae-447d-a019-66e462f130b8.png)
+![Fluxograma](https://user-images.githubusercontent.com/114233216/231769513-7364bbb1-f5a8-4c5a-abe3-303d25f1a685.png)
+
 
 Os prints abaixo mostram as configurações realizadas no software STM32CubeIDE.
-Estão nesta ordem:
+
 1. Clock Tree ![Fig1 - Clock Tree](https://user-images.githubusercontent.com/114233216/231754788-f5d3c02e-6e2a-4317-a7b3-0cf42e7f2d65.png)
 
 2. Pinout![Fig2 - Pinout](https://user-images.githubusercontent.com/114233216/231754822-89ebfc80-efb6-452e-837e-8888e4cc1ebd.png)
@@ -39,7 +40,7 @@ O código escrito está no arquivo main.c presente na pasta principal deste repo
 O arquivo HEX pode ser usado para gravar diretamente no STM32, sem a necessidade de se usar o STM32CubeIDE.
 O Arquivo IOC é o arquivo gerado pelo STM32CubeIDE, e possui as configurações visuais do software gerado.
 
-Para gravar no microcontrolador o arquivo HEX gerado pelo STM32CubeIDE usei o software STM32 ST-Link Utility.
+Para gravar no microcontrolador o arquivo HEX gerado pelo STM32CubeIDE usei o software STM32 ST-Link Utility, mostrado no print abaixo:
 ![STLink](https://user-images.githubusercontent.com/114233216/231759696-82f94c8f-6c49-44d0-a65a-3dd6f5c0e469.png)
 
 
@@ -51,7 +52,7 @@ O resultado é mostrado no software Free Termite Serial. (Pode ser usado em conj
 ![Termite](https://user-images.githubusercontent.com/114233216/231761066-cb1a0929-d0c5-4945-83f6-b6d4e1087287.png)
 
 
-Na imagem acima, foi realizada a leitura de 8500 valores. A última linha, que mostra o número de pulsos de clock, serve para contagem do tempo necessário para a realizção das 8500 leituras analógicas.
+Na imagem acima, foi realizada a leitura de 8500 valores. A última linha, que mostra o número de pulsos de clock, serve para contagem do tempo necessário para a realização das 8500 leituras analógicas.
 O Cálculo realizado para o cálculo do tempo é:
 
 Tempo total da operação = (Prescaler * Pulsos de Clock Total) / PCLK2
