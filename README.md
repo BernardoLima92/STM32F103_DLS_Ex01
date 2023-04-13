@@ -36,7 +36,7 @@ Os prints abaixo mostram as configurações realizadas no software STM32CubeIDE.
 8. USART1![Fig8 - USART1](https://user-images.githubusercontent.com/114233216/231755415-42268849-18a0-4004-91de-ad1b927dc8e8.png)
 
 
-O código escrito está no arquivo main.c presente na pasta principal deste repositório. Além deste código em C, há também um arquivo .HEX e um arquivo .IOC.
+O código escrito está no arquivo **main.c** presente na pasta principal deste repositório. Além deste código em C, há também um arquivo .HEX e um arquivo .IOC.
 O arquivo HEX pode ser usado para gravar diretamente no STM32, sem a necessidade de se usar o STM32CubeIDE.
 O Arquivo IOC é o arquivo gerado pelo STM32CubeIDE, e possui as configurações visuais do software gerado.
 
@@ -75,3 +75,25 @@ Em testes realizados com o Bluepill, ao se adquirir 8500 valores analógicos, fo
 
 Ou seja, se for necessário um tempo maior de aquisição, por exemplo 20mS, é necessário diminuir a frequência de amostragem, caso contrário, a memória será totamente
 preenchida antes de se completar os 20mS de operação. 
+
+
+## Alterar Número Total de Aquisições
+Para alterar o tempo total de aquisição é necessário alterar o define NS, presente na linha 20 do arquivo *main.c*
+```
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include <stdbool.h>
+#define Ns 8500 // Número de Leituras Realizadas
+/* USER CODE END Includes */
+```
+
+## Alterar a Frequência de Amostragem
+Para alterar a frequência de amostragem há dois  caminhos:
+- Alterar a frequência do ADCClock. Neste trabalho usamos 14MHz. Podemos configurar valores menores.
+
+- Alterar a quantidade de ciclos usados no Sampling Time, mostrado no print abaixo:
+![Fig9 - Sampling Time](https://user-images.githubusercontent.com/114233216/231772740-2b1bb5f3-3d32-4915-ba69-d2e7cc49a7c9.png)
+
+
+
+
