@@ -43,6 +43,12 @@ Para gravar no microcontrolador o arquivo HEX gerado pelo STM32CubeIDE usei o so
 ![STLink](https://user-images.githubusercontent.com/114233216/231756942-02806b43-a609-4b99-90d5-9c2604f42ae0.png)
 
 
+Para a transferência Serial entre o STM32F103 (BluPill) e o PC, usei um módulo conversor CH340, mostrado na imagem abaixo.
+![CH340](https://user-images.githubusercontent.com/114233216/231759344-0dbe064b-0a9d-40d6-9a7c-bffa4d09ceb2.png)
+
+
+
+
 
 O intervalo de tempo total no qual o sinal é adquirido depende diretamente da frequência de amostragem escolhida e da memória do microcontrolador.
 Em testes realizados com o Bluepill, ao se adquirir 8500 valores analógicos, foi preenchido 93% da memória RAM disponível.
