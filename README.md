@@ -46,9 +46,11 @@ Para gravar no microcontrolador o arquivo HEX gerado pelo STM32CubeIDE usei o so
 
 
 Para a transferência Serial entre o STM32F103 (BluPill) e o PC, usei um módulo conversor CH340, mostrado na imagem abaixo.
+
 ![CH340](https://user-images.githubusercontent.com/114233216/231759344-0dbe064b-0a9d-40d6-9a7c-bffa4d09ceb2.png)
 
 O resultado é mostrado no software Free Termite Serial. (Pode ser usado em conjunto com qualquer software, inclusive o LabView).
+
 ![Termite](https://user-images.githubusercontent.com/114233216/231761066-cb1a0929-d0c5-4945-83f6-b6d4e1087287.png)
 
 
