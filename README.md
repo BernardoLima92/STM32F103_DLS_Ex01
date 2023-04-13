@@ -48,8 +48,25 @@ Para a transferência Serial entre o STM32F103 (BluPill) e o PC, usei um módulo
 ![CH340](https://user-images.githubusercontent.com/114233216/231759344-0dbe064b-0a9d-40d6-9a7c-bffa4d09ceb2.png)
 
 O resultado é mostrado no software Free Termite Serial. (Pode ser usado em conjunto com qualquer software, inclusive o LabView).
+![Termite](https://user-images.githubusercontent.com/114233216/231761066-cb1a0929-d0c5-4945-83f6-b6d4e1087287.png)
 
 
+Na imagem acima, foi realizada a leitura de 8500 valores. A última linha, que mostra o número de pulsos de clock, serve para contagem do tempo necessário para a realizção das 8500 leituras analógicas.
+O Cálculo realizado para o cálculo do tempo é:
+
+Tempo total da operação = (Prescaler * Pulsos de Clock Total) / PCLK2
+
+Os valores usados neste código foram: Prescaler = 100, Pulsos = 4728, PCKL2 = 56MHz.
+Assim, temos que o Tempo total da operação = (100 x 4728)/56x10^6 = 8.44mS.
+Ou seja, a aquisição dos 8500 valores analógicos durou 8.44mS.
+
+Quanto à frequência de amostragem o cálculo é outro.
+A Imagem abaixo, retirada do datasheet, mostra o total de clocks usados para uma conversão ADC.
+![ADCClock](https://user-images.githubusercontent.com/114233216/231763456-2fd9d519-3a5d-4bdc-9483-513a3387724b.png)
+Assim, temos um tempo total de conversão de 1uS.
+
+Se fizermos uma regra de três simples com o resultado das 8500 leituras, chegaremos a um tempo de conversão parecido:
+Se 8500 leituras durou 8.44mS. Quanto tempo dura uma única leitura? 8.44ms/8500 = 0,99uS.
 
 
 O intervalo de tempo total no qual o sinal é adquirido depende diretamente da frequência de amostragem escolhida e da memória do microcontrolador.
