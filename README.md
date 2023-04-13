@@ -54,7 +54,8 @@ O resultado é mostrado no software Free Termite Serial. (Pode ser usado em conj
 ![Termite](https://user-images.githubusercontent.com/114233216/231761066-cb1a0929-d0c5-4945-83f6-b6d4e1087287.png)
 
 
-Na imagem acima, foi realizada a leitura de 8500 valores. A última linha, que mostra o número de pulsos de clock, serve para contagem do tempo necessário para a realização das 8500 leituras analógicas.
+Na imagem acima, foi realizada a leitura de 8500 valores. A porta analógica estava conectada ao pino de 3.3V do bluepill. 
+A última linha, que mostra o número de pulsos de clock, serve para contagem do tempo necessário para a realização das 8500 leituras analógicas.
 O Cálculo realizado para o cálculo do tempo é:
 
 Tempo total da operação = (Prescaler * Pulsos de Clock Total) / PCLK2
