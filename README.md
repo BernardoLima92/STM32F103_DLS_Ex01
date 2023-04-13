@@ -62,12 +62,15 @@ Ou seja, a aquisição dos 8500 valores analógicos durou 8.44mS.
 
 Quanto à frequência de amostragem o cálculo é outro.
 A Imagem abaixo, retirada do datasheet, mostra o total de clocks usados para uma conversão ADC.
+
 ![ADCClock](https://user-images.githubusercontent.com/114233216/231763456-2fd9d519-3a5d-4bdc-9483-513a3387724b.png)
+
 Assim, temos um tempo total de conversão de 1uS.
 
 Se fizermos uma regra de três simples com o resultado das 8500 leituras, chegaremos a um tempo de conversão parecido:
 Se 8500 leituras durou 8.44mS. Quanto tempo dura uma única leitura? 8.44ms/8500 = 0,99uS.
 
-
-O intervalo de tempo total no qual o sinal é adquirido depende diretamente da frequência de amostragem escolhida e da memória do microcontrolador.
 Em testes realizados com o Bluepill, ao se adquirir 8500 valores analógicos, foi preenchido 93% da memória RAM disponível.
+
+Ou seja, se for necessário um tempo maior de aquisição, por exemplo 20mS, é necessário diminuir a frequência de amostragem, caso contrário, a memória será totamente
+preenchida antes de se completar os 20mS de operação. 
