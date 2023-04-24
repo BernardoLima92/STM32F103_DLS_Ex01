@@ -9,7 +9,7 @@ experimentos de DLS (Espalhamento Dinâmico da Luz).
 
 O programa mostrado neste tutorial realiza a leitura de 1500 valores analógicos através do ADC do STM32F103 (Bluepill) sempre que um comando é dado.
 No nosso experimento, o comando é dado através de um push-button conecntado em modo pull-up à porta PB9 do microcontrolador.
-Sempre que uma leitura analógica é realizada, o DMA do microcontralor transfere o valor lido para um buffer. 
+Sempre que uma leitura analógica é realizada, o DMA do microcontrolador transfere o valor lido para um buffer. 
 Após a realização das 1500 leituras (e consequentemente, após o preenchimento do buffer) os dados são transferidos via porta serial para um PC.
 O softwate Termite foi usado como Terminal Serial para a leitura dos dados.
 
